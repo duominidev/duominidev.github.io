@@ -201,7 +201,7 @@
                         }
                         return e
                     },
-                    created: function() { document.title = "ACL4SSR 在线订阅转换", this.isPC = this.$getOS().isPc, this.form.sourceSubUrl = this.getLocalStorageItem("sourceSubUrl") },
+                    // created: function() { document.title = "ACL4SSR 在线订阅转换", this.isPC = this.$getOS().isPc, this.form.sourceSubUrl = this.getLocalStorageItem("sourceSubUrl") },
                     mounted: function() { this.form.clientType = c, this.form.customBackend = s, this.form.remoteConfig = a, this.notify(), this.getBackendVersion() },
                     methods: {
                         onCopy: function() { this.$message.success("Copied!") },
@@ -235,10 +235,10 @@
                             var t = new FormData;
                             t.append("longUrl", btoa(this.customSubUrl)), this.$axios.post(u, t, { header: { "Content-Type": "application/form-data; charset=utf-8" } }).then((function(t) { 1 === t.data.Code && "" !== t.data.ShortUrl ? (e.curtomShortSubUrl = t.data.ShortUrl, e.$copyText(t.data.ShortUrl), e.$message.success("短链接已复制到剪贴板")) : e.$message.error("短链接获取失败：" + t.data.Message) })).catch((function() { e.$message.error("短链接获取失败") })).finally((function() { e.loading = !1 }))
                         },
-                        notify: function() {
-                            var e = this.$createElement;
-                            this.$notify({ title: "隐私提示", type: "warning", message: e("i", { style: "color: teal" }, "各种订阅链接（短链接服务除外）生成纯前端实现，无隐私问题。默认提供后端转换服务，隐私担忧者请自行搭建后端服务。") })
-                        },
+                        // notify: function() {
+                        //     var e = this.$createElement;
+                        //     this.$notify({ title: "隐私提示", type: "warning", message: e("i", { style: "color: teal" }, "各种订阅链接（短链接服务除外）生成纯前端实现，无隐私问题。默认提供后端转换服务，隐私担忧者请自行搭建后端服务。") })
+                        // },
                         confirmUploadConfig: function() {
                             var e = this;
                             if ("" === this.uploadConfig) return this.$message.warning("远程配置不能为空"), !1;
