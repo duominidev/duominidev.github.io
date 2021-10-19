@@ -202,7 +202,7 @@
                         return e
                     },
                     // created: function() { document.title = "ACL4SSR 在线订阅转换", this.isPC = this.$getOS().isPc, this.form.sourceSubUrl = this.getLocalStorageItem("sourceSubUrl") },
-                    mounted: function() { this.form.clientType = c, this.form.customBackend = s, this.form.remoteConfig = a, this.notify(), this.getBackendVersion() },
+                    mounted: function() { this.form.clientType = c, this.form.customBackend = s, this.form.remoteConfig = a, this.getBackendVersion() },
                     methods: {
                         onCopy: function() { this.$message.success("Copied!") },
                         goToProject: function() { window.open(i) },
